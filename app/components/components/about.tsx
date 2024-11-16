@@ -32,36 +32,37 @@ const About = () => {
     }, []);
 
     // Counter function
-    const useCounter = (target: number, duration: number) => { // Explicitly type parameters
-        const [count, setCount] = useState(0);
+const useCounter = (target: number, duration: number, trigger: boolean) => { // Use "trigger" as a parameter
+    const [count, setCount] = useState(0);
 
-        useEffect(() => {
-            if (isVisible) {
-                let start = 0;
-                const increment = target / (duration / 10);
+    useEffect(() => {
+        if (trigger) { // Start counting only when triggered
+            let start = 0;
+            const increment = target / (duration / 10);
 
-                const counter = setInterval(() => {
-                    start += increment;
-                    if (start >= target) {
-                        setCount(target); // Set final count
-                        clearInterval(counter); // Stop counter
-                    } else {
-                        setCount(Math.ceil(start)); // Update count
-                    }
-                }, 10);
+            const counter = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    setCount(target); // Set final count
+                    clearInterval(counter); // Stop counter
+                } else {
+                    setCount(Math.ceil(start)); // Update count
+                }
+            }, 10);
 
-                return () => clearInterval(counter); // Cleanup interval
-            }
-        }, [target, duration]); // Remove `isVisible` as it isn't required in dependencies
+            return () => clearInterval(counter); // Cleanup interval
+        }
+    }, [target, duration, trigger]); // Use "trigger" instead of "isVisible"
 
-        return count;
-    };
+    return count;
+};
 
     // Using counters for each stat
-    const yearsInBusiness = useCounter(2, 1000);
-    const deliveredWebsites = useCounter(10, 1000);
-    const fasterWebsites = useCounter(100, 1000);
-    const customerSatisfaction = useCounter(100, 1000);
+const yearsInBusiness = useCounter(2, 1000, isVisible);
+const deliveredWebsites = useCounter(10, 1000, isVisible);
+const fasterWebsites = useCounter(100, 1000, isVisible);
+const customerSatisfaction = useCounter(100, 1000, isVisible);
+
 
     return (
         <>
