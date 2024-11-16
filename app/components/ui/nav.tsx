@@ -41,10 +41,10 @@ function Navbar({ className }: { className?: string }) {
               description="Attractive designs that will give you the attention you deserve."
             />
             <ProductItem
-              title="Search Engine Optimization"
+              title="Website Maintenance"
               href="#services"
-              src="/search-svgrepo-com.svg"
-              description="Your brand to be found on any search engine easily."
+              src="/checked-success-svgrepo-com.svg"
+              description="Your website to be updated with latest technologies."
             />
             <ProductItem
               title="Hosting"

@@ -1,4 +1,4 @@
-import { Brush, Laptop2, SearchCheck, Server } from "lucide-react";
+import { Brush, Laptop2, Server, TrendingUp } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 const Services = () => {
@@ -65,9 +65,9 @@ const Services = () => {
             <div className="overflow-hidden bg-slate-900 rounded shadow border border-transparent hover:border-sky-500 hover:bg-slate-800 hover:shadow-lg hover:scale-105 transition transform duration-300">
                 <div className="p-8">
                     <div className="flex items-center">
-                       <SearchCheck className="text-white text-4xl" />
+                       <TrendingUp className="text-white text-4xl" />
                         <div className="ml-5 mr-auto">
-                            <p className="text-xl font-semibold text-white">Search Engine Optimization</p>
+                            <p className="text-xl font-semibold text-white">Website maintenance</p>
                             <p className="mt-px text-sm text-white">Lore Ipsum</p>
                         </div>
                     </div>

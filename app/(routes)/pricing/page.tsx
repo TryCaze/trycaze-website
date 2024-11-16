@@ -1,128 +1,233 @@
-import { ArrowRight, Check } from "lucide-react";
+"use client"
 
-const pricing = () => {
+import { FloatingDockDemo } from "@/app/components/ui/footer";
+import { NavbarDemo } from "@/app/components/ui/nav";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { useEffect, useRef } from "react";
+
+const Pricing = () => {
+
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("fade-in");
+                    observer.unobserve(entry.target); // Stop observing after it fades in
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        const currentRef = sectionRef.current; // Copy ref value to a local variable
+
+        if (currentRef) {
+            observer.observe(currentRef);
+        }
+
+        return () => {
+            if (currentRef) {
+                observer.unobserve(currentRef); // Use local variable for cleanup
+            }
+        };
+    }, []); // No dependencies needed as we're only setting up the observer once
+
     return ( 
         <>
-        <section className="py-10 sm:py-16 lg:py-24">
-    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">Pricing & Plans</h2>
-            <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-white">Pricing includes interface design, hosting options and website maintenance.</p>
+        <NavbarDemo />
+        
+        <section ref={sectionRef} className="py-10 sm:py-16 lg:py-24 opacity-0 transform translate-y-10 transition duration-700">
+    <div className="container px-6 py-8 mx-auto">
+        <div className="sm:flex sm:items-center sm:justify-between">
+            <div>
+                <h2 className="text-2xl font-bold text-white lg:text-3xl">Simple, transparent pricing</h2>
+                <p className="mt-4 text-white">No Contracts. No surorise fees.</p>
+            </div>
+
+            <div className="overflow-hidden p-0.5 mt-6">
+            <a href="/contact" title="" className="inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-lg sm:mt-16 hover:bg-blue-700 focus:bg-blue-700" role="button">
+                    Get a quota
+                    <ArrowRight className="text-white" />
+                </a>
+            </div>
         </div>
 
-        <div className="grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 text-center lg:max-w-full lg:mt-16 lg:grid-cols-3">
-            <div className="overflow-hidden bg-slate-900 rounded-md">
-                <div className="p-8 xl:px-12">
-                    <h3 className="text-base font-semibold text-blue-700">Standard</h3>
-                    <p className="text-5xl font-bold text-white mt-7">$29</p>
-                    <p className="mt-3 text-base text-white">One-time payment</p>
+        <div className="grid gap-6 mt-16 -mx-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="px-6 py-4 overflow-hidden bg-slate-900 rounded shadow border border-transparent hover:border-sky-500 hover:bg-slate-800 hover:shadow-lg hover:scale-105 transition transform duration-300">
+                <p className="text-lg font-medium text-white">Intro</p>
 
-                    <ul className="inline-flex flex-col items-start space-y-5 text-left mt-9">
-                        <li className="inline-flex items-center space-x-2">
-                            <Check className="text-white" />
-                            <span className="text-base font-medium text-white"> 1 Domain License </span>
-                        </li>
+                <h4 className="mt-2 text-3xl font-semibold text-white">$19 <span className="text-base font-normal text-white">/ Month</span></h4>
+                
+                <p className="mt-4 text-white">For most businesses that want to optimaize web queries.</p>
 
-                        <li className="inline-flex items-center space-x-2">
-                            <Check className="text-white" />
-                            <span className="text-base font-medium text-white"> Full Celebration Library </span>
-                        </li>
+                <div className="mt-8 space-y-8">
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
 
-                        <li className="inline-flex items-center space-x-2">
-                            <Check className="text-white" />
-                            <span className="text-base font-medium text-white"> 120+ Coded Blocks </span>
-                        </li>
+                        <span className="mx-4 text-white">All limited links</span>
+                    </div>
 
-                        <li className="inline-flex items-center space-x-2">
-                            <Check className="text-white" />
-                            <span className="text-base font-medium text-white"> Design Files Included </span>
-                        </li>
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
 
-                        <li className="inline-flex items-center space-x-2">
-                            <Check className="text-white" />
-                            <span className="pb-0.5 text-base font-medium text-white border-b border-black border-dashed"> Premium Support </span>
-                        </li>
-                    </ul>
+                        <span className="mx-4 text-white">Own analytics platform</span>
+                    </div>
 
-                    <a href="#" title="" className="inline-flex items-center justify-center px-10 py-4 mt-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700" role="button"> Get full access </a>
-                    <p className="mt-4 text-sm text-white">14 Days Moneyback Guarantee</p>
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
+
+                        <span className="mx-4 text-white">Chat support</span>
+                    </div>
+
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
+
+                        <span className="mx-4 text-white">Optimize hashtags</span>
+                    </div>
+
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
+
+                        <span className="mx-4 text-white">Unlimited users</span>
+                    </div>
                 </div>
+
+                <button className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                    Choose plan
+                </button>
             </div>
 
-            <div className="overflow-hidden bg-slate-900 rounded-md shadow-lg">
-                <div className="p-8 xl:px-12">
-                    <h3 className="text-base font-semibold text-blue-700">Professional</h3>
-                    <p className="text-5xl font-bold text-white mt-7">$49</p>
-                    <p className="mt-3 text-base text-white">One-time payment</p>
+            <div className="px-6 py-4 overflow-hidden bg-slate-900 rounded shadow border border-transparent hover:border-sky-500 hover:bg-slate-800 hover:shadow-lg hover:scale-105 transition transform duration-300">
+                <p className="text-lg font-medium text-white">Base</p>
+                
+                <h4 className="mt-2 text-3xl font-semibold text-white">$39 <span className="text-base font-normal text-white">/ Month</span></h4>
+                
+                <p className="mt-4 text-white">For most businesses that want to optimaize web queries.</p>
 
-                    <ul className="inline-flex flex-col items-start space-y-5 text-left mt-9">
-                        <li className="inline-flex items-center space-x-2">
-                            <Check className="text-white" />
-                            <span className="text-base font-medium text-white"> 5 Domain License </span>
-                        </li>
+                <div className="mt-8 space-y-8">
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
 
-                        <li className="inline-flex items-center space-x-2">
-                            <Check className="text-white" />
-                            <span className="text-base font-medium text-white"> Full Celebration Library </span>
-                        </li>
+                        <span className="mx-4 text-white">All limited links</span>
+                    </div>
 
-                        <li className="inline-flex items-center space-x-2">
-                            <Check className="text-white" />
-                            <span className="text-base font-medium text-white"> 120+ Coded Blocks </span>
-                        </li>
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
 
-                        <li className="inline-flex items-center space-x-2">
-                            <Check className="text-white" />
-                            <span className="text-base font-medium text-white"> Design Files Included </span>
-                        </li>
+                        <span className="mx-4 text-white">Own analytics platform</span>
+                    </div>
 
-                        <li className="inline-flex items-center space-x-2">
-                            <Check className="text-white" />
-                            <span className="pb-0.5 text-base font-medium text-white border-b border-black border-dashed"> Premium Support </span>
-                        </li>
-                    </ul>
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
 
-                    <a href="#" title="" className="inline-flex items-center justify-center px-10 py-4 mt-10 text-base font-semibold text-white transition-all duration-200 rounded-md bg-gradient-to-r from-fuchsia-600 to-blue-600 hover:opacity-80 focus:opacity-80" role="button"> Get full access </a>
-                    <p className="mt-4 text-sm text-white">14 Days Moneyback Guarantee</p>
+                        <span className="mx-4 text-white">Chat support</span>
+                    </div>
+
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
+
+                        <span className="mx-4 text-white">Optimize hashtags</span>
+                    </div>
+
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
+
+                        <span className="mx-4 text-white">Unlimited users</span>
+                    </div>
                 </div>
+
+                <button className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                    Choose plan
+                </button>
             </div>
 
-            <div className="overflow-hidden bg-slate-900 rounded-md">
-                <div className="p-8 xl:px-12">
-                    <h3 className="text-base font-semibold text-blue-700">Exclusive</h3>
-                    <p className="text-5xl font-bold text-white mt-7">$79</p>
-                    <p className="mt-3 text-base text-white">One-time payment</p>
+            <div className="px-6 py-4 overflow-hidden bg-slate-900 rounded shadow border border-transparent hover:border-sky-500 hover:bg-slate-800 hover:shadow-lg hover:scale-105 transition transform duration-300">
+                <p className="text-lg font-medium text-gray-100">Popular</p>
+                
+                <h4 className="mt-2 text-3xl font-semibold text-gray-100">$99 <span className="text-base font-normal text-white">/ Month</span></h4>
+                
+                <p className="mt-4 text-white">For most businesses that want to optimaize web queries.</p>
 
-                    <ul className="inline-flex flex-col items-start space-y-5 text-left mt-9">
-                        <li className="inline-flex items-center space-x-2">
-                            <Check className="text-white" />
-                            <span className="text-base font-medium text-white"> Unlimited Domain License </span>
-                        </li>
+                <div className="mt-8 space-y-8">
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
 
-                        <li className="inline-flex items-center space-x-2">
-                            <Check className="text-white" />
-                            <span className="text-base font-medium text-white"> Full Celebration Library </span>
-                        </li>
+                        <span className="mx-4 text-white">All limited links</span>
+                    </div>
 
-                        <li className="inline-flex items-center space-x-2">
-                            <Check className="text-white" />
-                            <span className="text-base font-medium text-white"> 120+ Coded Blocks </span>
-                        </li>
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
 
-                        <li className="inline-flex items-center space-x-2">
-                            <Check className="text-white" />
-                            <span className="text-base font-medium text-white"> Design Files Included </span>
-                        </li>
+                        <span className="mx-4 text-white">Own analytics platform</span>
+                    </div>
 
-                        <li className="inline-flex items-center space-x-2">
-                            <Check className="text-white" />
-                            <span className="pb-0.5 text-base font-medium text-white border-b border-black border-dashed"> Premium Support </span>
-                        </li>
-                    </ul>
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
 
-                    <a href="#" title="" className="inline-flex items-center justify-center px-10 py-4 mt-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700" role="button"> Get full access </a>
-                    <p className="mt-4 text-sm text-white">14 Days Moneyback Guarantee</p>
+                        <span className="mx-4 text-white">Chat support</span>
+                    </div>
+
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
+
+                        <span className="mx-4 text-white">Optimize hashtags</span>
+                    </div>
+
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
+
+                        <span className="mx-4 text-white">Unlimited users</span>
+                    </div>
                 </div>
+
+                <button className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                    Choose plan
+                </button>
+            </div>
+
+            <div className="px-6 py-4 overflow-hidden bg-slate-900 rounded shadow border border-transparent hover:border-sky-500 hover:bg-slate-800 hover:shadow-lg hover:scale-105 transition transform duration-300">
+                <p className="text-lg font-medium text-white">Exterprise</p>
+                
+                <h4 className="mt-2 text-3xl font-semibold text-white">$199 <span className="text-base font-normal text-white">/ Month</span></h4>
+                
+                <p className="mt-4 text-white">For most businesses that want to optimaize web queries.</p>
+
+                <div className="mt-8 space-y-8">
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
+
+                        <span className="mx-4 text-white">All limited links</span>
+                    </div>
+
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
+
+                        <span className="mx-4 text-white">Own analytics platform</span>
+                    </div>
+
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
+
+                        <span className="mx-4 text-white">Chat support</span>
+                    </div>
+
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
+
+                        <span className="mx-4 text-white">Optimize hashtags</span>
+                    </div>
+
+                    <div className="flex items-center">
+                        <CheckCircle2 className="text-blue-500 font-bold" />
+
+                        <span className="mx-4 text-white">Unlimited users</span>
+                    </div>
+                </div>
+
+                <button className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                    Choose plan
+                </button>
             </div>
         </div>
     </div>
@@ -551,8 +656,9 @@ const pricing = () => {
 </section>
 
 
+<FloatingDockDemo />
 </>
      );
 }
  
-export default pricing;
+export default Pricing;
