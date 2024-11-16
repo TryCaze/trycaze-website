@@ -1,8 +1,36 @@
 import { FileStack, MessageCircle, Palette, Presentation } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const Process = () => {
+
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+      const observer = new IntersectionObserver(
+          ([entry]) => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add("fade-in");
+                  observer.unobserve(entry.target); // Stop observing after it fades in
+              }
+          },
+          { threshold: 0.1 }
+      );
+
+      const currentRef = sectionRef.current; // Copy ref value to a local variable
+
+      if (currentRef) {
+          observer.observe(currentRef);
+      }
+
+      return () => {
+          if (currentRef) {
+              observer.unobserve(currentRef); // Use local variable for cleanup
+          }
+      };
+  }, []); // No dependencies needed as we're only setting up the observer once
+
     return ( 
-        <section className="mt-16 flex justify-center flex-col mx-auto mb-10 py-12" id="timeline">
+        <section className="mt-16 flex justify-center flex-col mx-auto mb-10 py-12 sm:py-16 lg:py-24 opacity-0 transform translate-y-10 transition duration-700" id="timeline" ref={sectionRef}>
         <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-20"><div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div>
             <h2 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">Lorem Ipsum</h2>

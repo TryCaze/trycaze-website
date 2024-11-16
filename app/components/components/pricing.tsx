@@ -1,9 +1,36 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const Pricing = () => {
 
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("fade-in");
+                    observer.unobserve(entry.target); // Stop observing after it fades in
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        const currentRef = sectionRef.current; // Copy ref value to a local variable
+
+        if (currentRef) {
+            observer.observe(currentRef);
+        }
+
+        return () => {
+            if (currentRef) {
+                observer.unobserve(currentRef); // Use local variable for cleanup
+            }
+        };
+    }, []); // No dependencies needed as we're only setting up the observer once
+
     return ( 
-        <section>
+        <section ref={sectionRef} className="py-10 sm:py-16 lg:py-24 opacity-0 transform translate-y-10 transition duration-700">
     <div className="container px-6 py-8 mx-auto">
         <div className="sm:flex sm:items-center sm:justify-between">
             <div>
