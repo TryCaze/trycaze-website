@@ -18,19 +18,21 @@ const About = () => {
             { threshold: 0.1 }
         );
 
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
+        const currentRef = sectionRef.current; // Save ref to a local variable to avoid issues with cleanup
+
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
+            if (currentRef) {
+                observer.unobserve(currentRef); // Use local variable in cleanup
             }
         };
     }, []);
 
     // Counter function
-    const useCounter = (target, duration) => {
+    const useCounter = (target: number, duration: number) => { // Explicitly type parameters
         const [count, setCount] = useState(0);
 
         useEffect(() => {
@@ -50,7 +52,7 @@ const About = () => {
 
                 return () => clearInterval(counter); // Cleanup interval
             }
-        }, [isVisible, target, duration]);
+        }, [target, duration]); // Remove `isVisible` as it isn't required in dependencies
 
         return count;
     };

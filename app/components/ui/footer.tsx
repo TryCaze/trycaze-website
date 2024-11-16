@@ -133,7 +133,6 @@ export function FloatingDockDemo() {
         <hr className="mt-16 mb-10 border-gray-800" />
 
         <div className="flex flex-wrap items-center justify-between">
-            <img className="h-8 auto md:order-1" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo-alt.svg" alt="" />
 
             <ul className="flex items-center space-x-3 md:order-3">
                 <div className="flex items-center justify-center w-full">

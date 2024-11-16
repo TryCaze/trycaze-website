@@ -1,4 +1,4 @@
-import { FileStack, Laptop, MessageCircle, Palette, Presentation } from "lucide-react";
+import { FileStack, MessageCircle, Palette, Presentation } from "lucide-react";
 
 const Process = () => {
     return ( 

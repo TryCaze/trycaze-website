@@ -7,25 +7,27 @@ const Services = () => {
 
     useEffect(() => {
       const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("fade-in");
-            observer.unobserve(entry.target); // Stop observing after it fades in
-          }
-        },
-        { threshold: 0.1 }
+          ([entry]) => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add("fade-in");
+                  observer.unobserve(entry.target); // Stop observing after it fades in
+              }
+          },
+          { threshold: 0.1 }
       );
-  
-      if (sectionRef.current) {
-        observer.observe(sectionRef.current);
+
+      const currentRef = sectionRef.current; // Copy ref value to a local variable
+
+      if (currentRef) {
+          observer.observe(currentRef);
       }
-  
+
       return () => {
-        if (sectionRef.current) {
-          observer.unobserve(sectionRef.current);
-        }
+          if (currentRef) {
+              observer.unobserve(currentRef); // Use local variable for cleanup
+          }
       };
-    }, []);
+  }, []); // No dependencies needed as we're only setting up the observer once
     
   return (
     <section id="services"  ref={sectionRef} className="py-10 sm:py-16 lg:py-24 opacity-0 transform translate-y-10 transition duration-700">
