@@ -1,7 +1,7 @@
 "use client"
 
-import { FloatingDockDemo } from "@/app/components/ui/footer";
-import { NavbarDemo } from "@/app/components/ui/nav";
+import { NavbarDemo } from "../../../components/ui/nav";
+import { FloatingDockDemo } from "../../../components/ui/footer";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useEffect, useRef } from "react";
 
@@ -46,10 +46,10 @@ const Pricing = () => {
             </div>
 
             <div className="overflow-hidden p-0.5 mt-6">
-            <a href="/contact" title="" className="inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-lg sm:mt-16 hover:bg-blue-700 focus:bg-blue-700" role="button">
+            <p title="" className="inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-lg sm:mt-16 hover:bg-blue-700 focus:bg-blue-700" role="button">
                     Get a quota
                     <ArrowRight className="text-white" />
-                </a>
+                </p>
             </div>
         </div>
 

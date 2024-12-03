@@ -1,7 +1,10 @@
 import { BookOpenCheck, FileSearch, Library, PersonStanding, Phone, ShieldCheck } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef } from "react";
 
 const Importance = () => {
+
+    const t = useTranslations('Importance');
 
     const sectionRef = useRef(null);
 
@@ -33,8 +36,8 @@ const Importance = () => {
     <section ref={sectionRef} className="opacity-0 transform translate-y-10 transition duration-700">
     <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">Why is a website important to us?</h2>
-            <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-200">A key to a successful business is a professional website that impresses every customer.</p>
+            <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">{t('importance-title')}</h2>
+            <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-200">{t('importance-subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-1 gap-6 mt-12 lg:mt-16 xl:gap-10 sm:grid-cols-2 lg:grid-cols-3">
@@ -43,11 +46,11 @@ const Importance = () => {
                     <div className="flex items-center">
                        <ShieldCheck className="text-white text-4xl" />
                         <div className="ml-5 mr-auto">
-                            <p className="text-xl font-semibold text-white">Security</p>
-                            <p className="mt-px text-sm text-white">Lore Ipsum</p>
+                            <p className="text-xl font-semibold text-white">{t('security')}</p>
+                            <p className="mt-px text-sm text-white">{t('security-sub')}</p>
                         </div>
                     </div>
-                    <p className="text-base leading-relaxed text-white mt-7">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <p className="text-base leading-relaxed text-white mt-7">{t('security-dis')}</p>
                 </div>
             </div>
 
@@ -56,11 +59,11 @@ const Importance = () => {
                     <div className="flex items-center">
                         <BookOpenCheck className="text-white text-4xl" />
                         <div className="ml-5 mr-auto">
-                            <p className="text-xl font-semibold text-white">Readability</p>
-                            <p className="mt-px text-sm text-white">Lorem Ipsum</p>
+                            <p className="text-xl font-semibold text-white">{t('read')}</p>
+                            <p className="mt-px text-sm text-white">{t('read-sub')}</p>
                         </div>
                     </div>
-                    <p className="text-base leading-relaxed text-white mt-7">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <p className="text-base leading-relaxed text-white mt-7">{t('read-dis')}</p>
                 </div>
             </div>
 
@@ -69,11 +72,11 @@ const Importance = () => {
                     <div className="flex items-center">
                         <PersonStanding className="text-white text-4xl" />
                         <div className="ml-5 mr-auto">
-                            <p className="text-xl font-semibold text-white">Accessibility</p>
-                            <p className="mt-px text-sm text-white">Lorem Ipsum</p>
+                            <p className="text-xl font-semibold text-white">{t('access')}</p>
+                            <p className="mt-px text-sm text-white">{t('access-sub')}</p>
                         </div>
                     </div>
-                    <p className="text-base leading-relaxed text-white mt-7">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <p className="text-base leading-relaxed text-white mt-7">{t('access-dis')}</p>
                 </div>
             </div>
 
@@ -82,11 +85,11 @@ const Importance = () => {
                     <div className="flex items-center">
                         <Library className="text-white text-4xl" />
                         <div className="ml-5 mr-auto">
-                            <p className="text-xl font-semibold text-white">Information</p>
-                            <p className="mt-px text-sm text-white">Lorem Ipsum</p>
+                            <p className="text-xl font-semibold text-white">{t('information')}</p>
+                            <p className="mt-px text-sm text-white">{t('information-sub')}</p>
                         </div>
                     </div>
-                    <p className="text-base leading-relaxed text-white mt-7">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <p className="text-base leading-relaxed text-white mt-7">{t('information-dis')}</p>
                 </div>
             </div>
 
@@ -95,11 +98,11 @@ const Importance = () => {
                     <div className="flex items-center">
                         <Phone className="text-white text-4xl" />
                         <div className="ml-5 mr-auto">
-                            <p className="text-xl font-semibold text-white">Contact</p>
-                            <p className="mt-px text-sm text-white">Lorem Ipsum</p>
+                            <p className="text-xl font-semibold text-white">{t('contact')}</p>
+                            <p className="mt-px text-sm text-white">{t('contact-sub')}</p>
                         </div>
                     </div>
-                    <p className="text-base leading-relaxed text-white mt-7">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <p className="text-base leading-relaxed text-white mt-7">{t('contact-dis')}</p>
                 </div>
             </div>
 
@@ -108,11 +111,11 @@ const Importance = () => {
                     <div className="flex items-center">
                         <FileSearch className="text-white text-4lg" />
                         <div className="ml-5 mr-auto">
-                            <p className="text-xl font-semibold text-white">Search Optimization</p>
-                            <p className="mt-px text-sm text-white">Lore Ipsum</p>
+                            <p className="text-xl font-semibold text-white">{t('seo')}</p>
+                            <p className="mt-px text-sm text-white">{t('seo-sub')}</p>
                         </div>
                     </div>
-                    <p className="text-base leading-relaxed text-white mt-7">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <p className="text-base leading-relaxed text-white mt-7">{t('seo-dis')}</p>
                 </div>
             </div>
         </div>

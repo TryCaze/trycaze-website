@@ -1,8 +1,12 @@
 import { ArrowBigUpDash, BadgeCheck, CalendarDays, Code2, ThumbsUp } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const About = () => {
+
+    const t = useTranslations('HomePage');
+
     const sectionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -86,7 +90,7 @@ const customerSatisfaction = useCounter(100, 1000, isVisible);
                                     <div className="px-10 py-6">
                                         <div className="flex items-center">
                                             <p className="flex-shrink-0 text-3xl font-bold text-blue-600 sm:text-4xl">100%</p>
-                                            <p className="pl-6 text-sm font-medium text-white sm:text-lg">Satisfied customers</p>
+                                            <p className="pl-6 text-sm font-medium text-white sm:text-lg">{t('title')}</p>
                                         </div>
                                     </div>
                                 </div>

@@ -1,0 +1,44 @@
+{
+    "HomePage": {
+      "title": "The ultimate development studio",
+      "about": "We build",
+      "about1": "products with the latest technologies and frameworks.",
+      "quota": "Get a quota",
+      "subsection1": "Over 1M lines of code written",
+      "subsection2": "2 years of creating websites",
+      "subsection3": "10+ successfully built websites"
+    },
+    "Header": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "webdev": "Website Development",
+      "interfacedesign": "Interface Design",
+      "webmaintaince": "Website Maintenance",
+      "hosting": "Hosting",
+      "pricing": "Pricing",
+      "contact": "Contact"
+    },
+    "Importance": {
+      "security": "Security",
+      "security-sub": "Building Trust in the Digital World",
+      "security-dis": "Protect user data with robust security measures to ensure a safe browsing experience and establish credibility.",
+      "read": "Readability",
+      "read-sub": "Clear and Engaging Communication",
+      "read-dis": "Deliver content in a way that’s easy to read and visually appealing, ensuring your message resonates with the audience.",
+      "access": "Accessibility",
+      "access-sub": "Inclusive for Everyone",
+      "access-dis": "Design your website to be usable by all, including individuals with disabilities, to broaden your reach.",
+      "information":"Information",
+      "information-sub":"Your Story, Your Value",
+      "information-dis":"Provide key details about your offerings, mission, and value proposition to inform and engage visitors effectively.",
+      "contact":"Contact",
+      "contact-sub":"Stay Connected with Your Audience",
+      "contact-dis":"Make it simple for visitors to reach out with accessible contact forms, email links, and other communication channels.",
+      "seo":"Search Optimization",
+      "seo-sub":"Be Found, Stay Relevant",
+      "seo-dis":"Enhance your website’s visibility on search engines to attract more visitors and grow your online presence.",
+      "importance-title":"Why is a website important to us?",
+      "importance-subtitle":"A key to a successful business is a professional website that impresses every customer."
+    }
+}

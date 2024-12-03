@@ -1,0 +1,44 @@
+{
+    "HomePage": {
+      "title": "The ultimate development studio",
+      "about": "Izrađujemo",
+      "about1": "produkte sa najnovijom tehnologijom.",
+      "quota": "Dobijte procjenu",
+      "subsection1": "Preko 1M linije koda napisano",
+      "subsection2": "2 godine iskustva izrade web stranica",
+      "subsection3": "10+ izrađenih web stranica"
+    },
+    "Header": {
+      "home": "Početna",
+      "about": "O nama",
+      "services": "Usluga",
+      "webdev": "Website Development",
+      "interfacedesign": "Dizajn sučelja",
+      "webmaintaince": "Održavanje web stranice",
+      "hosting": "Hosting",
+      "pricing": "Cijene",
+      "contact": "Kontakt"
+    },
+    "Importance": {
+      "security": "Sigurnost",
+      "security-sub": "Izgradnja povjerenja u digitalnom svijetu",
+      "security-dis": "Zaštitite korisničke podatke snažnim sigurnosnim mjerama kako biste osigurali sigurno pregledavanje i uspostavili kredibilitet.",
+      "read": "Čitljivost",
+      "read-sub": "Jasna i zanimljiva komunikacija",
+      "read-dis": "Prikažite sadržaj na način koji je jednostavan za čitanje i vizualno privlačan, osiguravajući da vaša poruka dopre do publike.",
+      "access": "Pristupačnost",
+      "access-sub": "Uključivo za sve",
+      "access-dis": "Dizajnirajte svoju web stranicu tako da bude korisna svima, uključujući osobe s invaliditetom, kako biste proširili svoju publiku.",
+      "information": "Informacije",
+      "information-sub": "Vaša priča, vaša vrijednost",
+      "information-dis": "Pružite ključne detalje o svojoj ponudi, misiji i vrijednostima kako biste učinkovito informirali i angažirali posjetitelje.",
+      "contact": "Kontakt",
+      "contact-sub": "Ostanite povezani sa svojom publikom",
+      "contact-dis": "Olakšajte posjetiteljima da vas kontaktiraju putem dostupnih kontaktnih obrazaca, poveznica na email i drugih kanala komunikacije.",
+      "seo": "Optimizacija pretraživanja",
+      "seo-sub": "Budite pronađeni, ostanite relevantni",
+      "seo-dis": "Poboljšajte vidljivost svoje web stranice na tražilicama kako biste privukli više posjetitelja i povećali svoju prisutnost na internetu.",
+      "importance-title": "Zašto nam je web stranica važna?",
+      "importance-subtitle": "Ključ uspješnog poslovanja je profesionalna web stranica koja impresionira svakog kupca."
+}
+}

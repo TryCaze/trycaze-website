@@ -1,7 +1,7 @@
-const faq = () => {
+const FAQ = () => {
     return ( 
         <div>Hi!</div>
      );
 }
  
-export default faq;
+export default FAQ;
