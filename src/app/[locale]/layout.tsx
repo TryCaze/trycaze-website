@@ -10,21 +10,18 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: { locale: "hr" | "en" };
 }) {
   const { locale } = params;
 
-  if (!routing.locales.includes(locale as "en" | "hr")) {
+  if (!routing.locales.includes(locale)) {
     notFound();
-  }  
+  }
 
-  // Cast `locale` to the expected type if valid
-  const validLocale = locale as "en" | "hr";
-
-  const messages = await getMessages({ locale: validLocale });
+  const messages = await getMessages({ locale });
 
   return (
-    <html lang={validLocale}>
+    <html lang={locale}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
