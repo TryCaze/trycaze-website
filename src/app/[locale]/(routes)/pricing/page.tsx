@@ -4,6 +4,7 @@ import { Navbar } from "../../../components/ui/nav";
 import { FloatingDockDemo } from "../../../components/ui/footer";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 
 const Pricing = () => {
 
@@ -417,31 +418,27 @@ const Pricing = () => {
                         <td className="py-6 pr-4"></td>
 
                         <td className="px-4 py-6 text-center">
-                            <a href="#" title="" className="inline-flex items-center font-semibold text-blue-600 hover:text-blue-700">
+                            <Link href="#" title="" className="inline-flex items-center font-semibold text-blue-600 hover:text-blue-700" />
                                 Get Started
                                 <ArrowRight />
-                            </a>
                         </td>
 
                         <td className="px-4 py-6 text-center">
-                            <a href="#" title="" className="inline-flex items-center font-semibold text-blue-600 hover:text-blue-700">
+                            <Link href="#" title="" className="inline-flex items-center font-semibold text-blue-600 hover:text-blue-700" />
                                 Get Started
                                 <ArrowRight />
-                            </a>
                         </td>
 
                         <td className="px-4 py-6 text-center">
-                            <a href="#" title="" className="inline-flex items-center font-semibold text-blue-600 hover:text-blue-700">
+                            <Link href="#" title="" className="inline-flex items-center font-semibold text-blue-600 hover:text-blue-700" />
                                 Get Started
                                 <ArrowRight />
-                            </a>
                         </td>
 
                         <td className="px-4 py-6 text-center">
-                            <a href="#" title="" className="inline-flex items-center font-semibold text-blue-600 hover:text-blue-700">
+                            <Link href="#" title="" className="inline-flex items-center font-semibold text-blue-600 hover:text-blue-700" />
                                 Get Started
                                 <ArrowRight />
-                            </a>
                         </td>
                     </tr>
                 </tbody>
@@ -628,28 +625,28 @@ const Pricing = () => {
                 <span className="text-sm font-medium text-blue-600"> Free </span>
                 <p className="mt-2 text-xl font-bold">$0</p>
                 <span className="mt-1 text-sm font-normal text-white"> Per month </span>
-                <a href="#" title="" className="flex items-center justify-center w-full px-1 py-2 mt-5 text-xs text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700" role="button"> Get Started </a>
+                <Link href="#" title="" className="flex items-center justify-center w-full px-1 py-2 mt-5 text-xs text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700" role="button" /> Get Started
             </div>
 
             <div className="px-1 py-2 sm:px-4">
                 <span className="text-sm font-medium text-blue-600"> Team </span>
                 <p className="mt-2 text-xl font-bold">$99</p>
                 <span className="mt-1 text-sm font-normal text-white"> Per month </span>
-                <a href="#" title="" className="flex items-center justify-center w-full px-1 py-2 mt-5 text-xs text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700" role="button"> Get Started </a>
+                <Link href="#" title="" className="flex items-center justify-center w-full px-1 py-2 mt-5 text-xs text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700" role="button" /> Get Started
             </div>
 
             <div className="px-1 py-2 sm:px-4">
                 <span className="text-sm font-medium text-blue-600"> Popular </span>
                 <p className="mt-2 text-xl font-bold">$150</p>
                 <span className="mt-1 text-sm font-normal text-white"> Per month </span>
-                <a href="#" title="" className="flex items-center justify-center w-full px-1 py-2 mt-5 text-xs text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700" role="button"> Get Started </a>
+                <Link href="#" title="" className="flex items-center justify-center w-full px-1 py-2 mt-5 text-xs text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700" role="button" /> Get Started
             </div>
 
             <div className="px-1 pt-2 pb-4 sm:px-4">
                 <span className="text-sm font-medium text-blue-600"> Enterprise </span>
                 <p className="mt-2 text-xl font-bold">$490</p>
                 <span className="mt-1 text-sm font-normal text-white"> Per month </span>
-                <a href="#" title="" className="flex items-center justify-center w-full px-1 py-2 mt-5 text-xs text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700" role="button"> Get Started </a>
+                <Link href="#" title="" className="flex items-center justify-center w-full px-1 py-2 mt-5 text-xs text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700" role="button" /> Get Started
             </div>
         </div>
     </div>
