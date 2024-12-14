@@ -40,5 +40,30 @@
       "seo-dis": "Poboljšajte vidljivost svoje web stranice na tražilicama kako biste privukli više posjetitelja i povećali svoju prisutnost na internetu.",
       "importance-title": "Zašto nam je web stranica važna?",
       "importance-subtitle": "Ključ uspješnog poslovanja je profesionalna web stranica koja impresionira svakog kupca."
+},
+"About": {
+  "title": "Naš Studio",
+  "description": "Ne znam što napisati, lol, odustajem.",
+  "image-description": "Zadovoljstvo kupaca",
+  "subtitle": "Do sada imamo",
+  "card1": "Godine poslovanja",
+  "card2": "Isporučene web stranice",
+  "card3": "Brže web stranice",
+  "card4": "Zadovoljstvo kupaca"
+},
+"Services": {
+"title": "Usluge koje nudimo",
+"web-dev": "Izrada Web Stranica",
+"interface-design": "Dizajn Sučelja",
+"website-maintenance": "Održavanje Web Stranica",
+"hosting": "Hosting",
+"web-dev-subtitle": "Prilagođena Rješenja za Svaku Potrebu",
+"web-dev-description": "Izrađujemo responzivne, korisnički prilagođene web stranice prilagođene vašim poslovnim ciljevima. Bilo da vam treba e-commerce platforma, portfelj ili korporativna stranica, oživljavamo vašu viziju uz najmoderniju tehnologiju.",
+"interface-design-subtitle": "Korisnički Usmjeren i Vizualno Privlačan Dizajn",
+"interface-design-description": "Stvaramo besprijekorna i intuitivna iskustva za vaše korisnike. Fokusiramo se na spajanje funkcionalnosti i estetike kako bismo isporučili sučelja koja angažiraju i inspiriraju.",
+"website-maintenance-subtitle": "Održavanje Vaše Web Stranice u Top Formi",
+"website-maintenance-description": "Bez brige uz našu sveobuhvatnu uslugu održavanja. Od ažuriranja i sigurnosnih kopija do rješavanja problema i optimizacije performansi, osiguravamo da vaša stranica ostane sigurna i ažurirana.",
+"hosting-subtitle": "Pouzdan i Brz Web Hosting",
+"hosting-description": "Vaša web stranica bit će smještena na sigurnim i visokoučinkovitim serverima Hostingera, što osigurava brzo učitavanje i pouzdan rad. Mi ćemo upravljati postavkama i podrškom kako biste uživali u bezbrižnom hostingu."
 }
 }

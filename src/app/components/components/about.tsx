@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 const About = () => {
 
-    const t = useTranslations('HomePage');
+    const t = useTranslations('About');
 
     const sectionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
@@ -90,7 +90,7 @@ const customerSatisfaction = useCounter(100, 1000, isVisible);
                                     <div className="px-10 py-6">
                                         <div className="flex items-center">
                                             <p className="flex-shrink-0 text-3xl font-bold text-blue-600 sm:text-4xl">100%</p>
-                                            <p className="pl-6 text-sm font-medium text-white sm:text-lg">{t('title')}</p>
+                                            <p className="pl-6 text-sm font-medium text-white sm:text-lg">{t('image-description')}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -101,10 +101,9 @@ const customerSatisfaction = useCounter(100, 1000, isVisible);
                             <div className="flex items-center justify-center w-16 h-16 bg-slate-900 rounded-full">
                                 <BadgeCheck className="text-blue-500" size={46} />
                             </div>
-                            <h2 className="mt-10 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl lg:leading-tight">Our Studio</h2>
+                            <h2 className="mt-10 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl lg:leading-tight">{t('title')}</h2>
                             <p className="mt-6 text-lg leading-relaxed text-white">
-                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia conse duis enim velit mollit. Exercitation veniam.
-                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia conse duis enim velit mollit. Exercitation veniam.
+                                {t('description')}
                             </p>
                         </div>
                     </div>
@@ -119,7 +118,7 @@ const customerSatisfaction = useCounter(100, 1000, isVisible);
             >
                 <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="text-center">
-                        <h4 className="text-4xl font-bold text-white">So far we have</h4>
+                        <h4 className="text-4xl font-bold text-white">{t('subtitle')}</h4>
                     </div>
 
                     <div className="grid grid-cols-1 gap-6 px-6 mt-8 sm:px-0 lg:mt-16 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-12">
@@ -130,7 +129,7 @@ const customerSatisfaction = useCounter(100, 1000, isVisible);
                                     <CalendarDays className="text-blue-500" size={46} />
                                     <div className="ml-4">
                                         <h4 className="text-4xl font-bold text-white">{yearsInBusiness}+</h4>
-                                        <p className="mt-1.5 text-lg font-medium leading-tight text-white">Years in business</p>
+                                        <p className="mt-1.5 text-lg font-medium leading-tight text-white">{t('card1')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +142,7 @@ const customerSatisfaction = useCounter(100, 1000, isVisible);
                                     <Code2 className="text-blue-500" size={46} />
                                     <div className="ml-4">
                                         <h4 className="text-4xl font-bold text-white">{deliveredWebsites}+</h4>
-                                        <p className="mt-1.5 text-lg font-medium leading-tight text-white">Delivered websites</p>
+                                        <p className="mt-1.5 text-lg font-medium leading-tight text-white">{t('card2')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -156,7 +155,7 @@ const customerSatisfaction = useCounter(100, 1000, isVisible);
                                     <ArrowBigUpDash className="text-blue-500" size={46} />
                                     <div className="ml-4">
                                         <h4 className="text-4xl font-bold text-white">{fasterWebsites}x</h4>
-                                        <p className="mt-1.5 text-lg font-medium leading-tight text-white">Faster websites</p>
+                                        <p className="mt-1.5 text-lg font-medium leading-tight text-white">{t('card3')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -169,7 +168,7 @@ const customerSatisfaction = useCounter(100, 1000, isVisible);
                                     <ThumbsUp className="text-blue-500" size={46} />
                                     <div className="ml-4">
                                         <h4 className="text-4xl font-bold text-white">{customerSatisfaction}%</h4>
-                                        <p className="mt-1.5 text-lg font-medium leading-tight text-white">Customer satisfaction</p>
+                                        <p className="mt-1.5 text-lg font-medium leading-tight text-white">{t('card4')}</p>
                                     </div>
                                 </div>
                             </div>

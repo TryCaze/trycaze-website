@@ -40,5 +40,30 @@
       "seo-dis":"Enhance your website’s visibility on search engines to attract more visitors and grow your online presence.",
       "importance-title":"Why is a website important to us?",
       "importance-subtitle":"A key to a successful business is a professional website that impresses every customer."
+    },
+    "About": {
+      "title":"Our Studio",
+      "description":"Idk what to write lol i give up.",
+      "image-description":"Customer satisfaction",
+      "subtitle":"So far we have",
+      "card1":"Years in business",
+      "card2":"Delivered websites",
+      "card3":"Faster websites",
+      "card4":"Customer satisfaction"
+    },
+    "Services": {
+      "title":"Services we offer",
+      "web-dev":"Website Development",
+      "interface-design":"Interface Design",
+      "website-maintenance":"Website Maintenance",
+      "hosting":"Hosting",
+      "web-dev-subtitle":"Custom Solutions for Every Need",
+      "web-dev-description":"We craft responsive, user-friendly websites tailored to your business goals. Whether you need an e-commerce platform, a portfolio, or a corporate site, we bring your vision to life with cutting-edge technology.",
+      "interface-design-subtitle":"User-Centric and Visually Stunning",
+      "interface-design-description":"Create seamless and intuitive experiences for your users. We focus on blending functionality with aesthetics to deliver interfaces that engage and inspire.",
+      "website-maintenance-subtitle":"Keeping Your Website Running Smoothly",
+      "website-maintenance-description":"Stay worry-free with our comprehensive maintenance services. From updates and backups to troubleshooting and performance optimization, we ensure your site remains secure and up-to-date.",
+       "hosting-subtitle":"Reliable and Fast Web Hosting",
+      "hosting-description":"Your website will be hosted on Hostingers secure and high-performance servers, ensuring fast load times and dependable uptime. we will manage the setup and support, so you can enjoy hassle-free hosting."
     }
 }
