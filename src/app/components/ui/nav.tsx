@@ -20,9 +20,7 @@ export function Navbar() {
     <header className="flex bg-slate-900 font-sans min-h-[70px] tracking-wide relative z-50">
       <div className="flex flex-wrap items-center justify-between px-10 py-3 gap-4 w-full">
         {/* Logo */}
-        <a href="javascript:void(0)">
           <Image src="images/logo.svg" alt="logo" width={200} height={150} />
-        </a>
 
         {/* Mobile Menu Toggle Buttons */}
         <button
@@ -80,15 +78,15 @@ export function Navbar() {
           {/* Navigation Links */}
           <ul className="lg:flex lg:gap-x-10 max-lg:space-y-3">
             <li className="max-lg:border-b max-lg:py-3">
-              <a
+              <Link
                 href="/"
                 className="hover:text-blue-500 text-[15px] font-bold text-white block"
               >
                 {t('home')}
-              </a>
+              </Link>
             </li>
             <li className="max-lg:border-b max-lg:py-3">
-              <a
+              <Link
                href="#"
                onClick={(e) => {
                  e.preventDefault(); // Prevent navigation to the `#`
@@ -99,7 +97,7 @@ export function Navbar() {
                }}
                 className="hover:text-blue-500 text-[15px] font-bold text-white block">
                 {t('about')}
-              </a>
+              </Link>
             </li>
             <li className='group max-lg:border-b max-lg:py-3 relative'>
             <a
@@ -114,7 +112,7 @@ export function Navbar() {
             <ul
               className='absolute shadow-lg bg-slate-800 space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
               <li className='border-b py-2 '>
-                <a 
+                <Link 
                  href="#"
                  onClick={(e) => {
                    e.preventDefault(); // Prevent navigation to the `#`
@@ -125,10 +123,10 @@ export function Navbar() {
                  }}
                 className='hover:text-blue-500 text-white text-[15px] font-bold block'>
                  <Laptop2 /> {t('webdev')}
-                </a>
+                </Link>
               </li>
               <li className='border-b py-2 '>
-                <a
+                <Link
                  href="#"
                  onClick={(e) => {
                    e.preventDefault(); // Prevent navigation to the `#`
@@ -139,10 +137,10 @@ export function Navbar() {
                  }}
                 className='hover:text-blue-500 text-white text-[15px] font-bold block'>
                 <Brush /> {t('interfacedesign')}
-                </a>
+                </Link>
               </li>
               <li className='border-b py-2 '>
-                <a
+                <Link
                  href="#"
                  onClick={(e) => {
                    e.preventDefault(); // Prevent navigation to the `#`
@@ -153,10 +151,10 @@ export function Navbar() {
                  }}
                 className='hover:text-blue-500 text-white text-[15px] font-bold block'>
                   <TrendingUp />  {t('webmaintaince')}
-                </a>
+                </Link>
                   </li>
               <li className='border-b py-2 '>
-                <a
+                <Link
                  href="#"
                  onClick={(e) => {
                    e.preventDefault(); // Prevent navigation to the `#`
@@ -167,7 +165,7 @@ export function Navbar() {
                  }}
                 className='hover:text-blue-500 text-white text-[15px] font-bold block'>
                 <Server />  {t('hosting')}
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
@@ -194,7 +192,7 @@ export function Navbar() {
             </ul>
           </li>
           <li className="max-lg:border-b max-lg:py-3">
-              <a
+              <Link
                  href="#"
                  onClick={(e) => {
                    e.preventDefault(); // Prevent navigation to the `#`
@@ -206,7 +204,7 @@ export function Navbar() {
                 className="hover:text-blue-500 text-[15px] font-bold text-white block"
               >
                 {t('contact')}
-              </a>
+              </Link>
             </li>
             <Switch />
           </ul>
