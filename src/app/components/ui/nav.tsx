@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Switch from "./switch";
 import { useTranslations } from "next-intl";
+import { Link } from "@/src/i18n/routing";
 
 export function Navbar() {
 
@@ -80,7 +81,7 @@ export function Navbar() {
           <ul className="lg:flex lg:gap-x-10 max-lg:space-y-3">
             <li className="max-lg:border-b max-lg:py-3">
               <a
-                href="javascript:void(0)"
+                href="/"
                 className="hover:text-blue-500 text-[15px] font-bold text-white block"
               >
                 {t('home')}
@@ -88,14 +89,20 @@ export function Navbar() {
             </li>
             <li className="max-lg:border-b max-lg:py-3">
               <a
-                href="javascript:void(0)"
-                className="hover:text-blue-500 text-[15px] font-bold text-white block"
-              >
+               href="#"
+               onClick={(e) => {
+                 e.preventDefault(); // Prevent navigation to the `#`
+                 const section = document.getElementById('about');
+                 if (section) {
+                   section.scrollIntoView({ behavior: 'smooth' });
+                 }
+               }}
+                className="hover:text-blue-500 text-[15px] font-bold text-white block">
                 {t('about')}
               </a>
             </li>
             <li className='group max-lg:border-b max-lg:py-3 relative'>
-            <a href='javascript:void(0)'
+            <a
               className='hover:text-blue-500 fill-white text-white text-[15px] font-bold lg:hover:fill-blue-500 block'>{t('services')}<svg
                 xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" className="ml-1 inline-block"
                 viewBox="0 0 24 24">
@@ -107,52 +114,95 @@ export function Navbar() {
             <ul
               className='absolute shadow-lg bg-slate-800 space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
               <li className='border-b py-2 '>
-                <a href='javascript:void(0)'className='hover:text-blue-500 text-white text-[15px] font-bold block'>
+                <a 
+                 href="#"
+                 onClick={(e) => {
+                   e.preventDefault(); // Prevent navigation to the `#`
+                   const section = document.getElementById('services');
+                   if (section) {
+                     section.scrollIntoView({ behavior: 'smooth' });
+                   }
+                 }}
+                className='hover:text-blue-500 text-white text-[15px] font-bold block'>
                  <Laptop2 /> {t('webdev')}
                 </a>
               </li>
               <li className='border-b py-2 '>
-                <a href='javascript:void(0)' className='hover:text-blue-500 text-white text-[15px] font-bold block'>
+                <a
+                 href="#"
+                 onClick={(e) => {
+                   e.preventDefault(); // Prevent navigation to the `#`
+                   const section = document.getElementById('services');
+                   if (section) {
+                     section.scrollIntoView({ behavior: 'smooth' });
+                   }
+                 }}
+                className='hover:text-blue-500 text-white text-[15px] font-bold block'>
                 <Brush /> {t('interfacedesign')}
                 </a>
               </li>
               <li className='border-b py-2 '>
-                <a href='javascript:void(0)' className='hover:text-blue-500 text-white text-[15px] font-bold block'>
+                <a
+                 href="#"
+                 onClick={(e) => {
+                   e.preventDefault(); // Prevent navigation to the `#`
+                   const section = document.getElementById('services');
+                   if (section) {
+                     section.scrollIntoView({ behavior: 'smooth' });
+                   }
+                 }}
+                className='hover:text-blue-500 text-white text-[15px] font-bold block'>
                   <TrendingUp />  {t('webmaintaince')}
                 </a>
                   </li>
               <li className='border-b py-2 '>
-                <a href='javascript:void(0)' className='hover:text-blue-500 text-white text-[15px] font-bold block'>
+                <a
+                 href="#"
+                 onClick={(e) => {
+                   e.preventDefault(); // Prevent navigation to the `#`
+                   const section = document.getElementById('services');
+                   if (section) {
+                     section.scrollIntoView({ behavior: 'smooth' });
+                   }
+                 }}
+                className='hover:text-blue-500 text-white text-[15px] font-bold block'>
                 <Server />  {t('hosting')}
                 </a>
               </li>
             </ul>
           </li>
           <li className='group max-lg:border-b max-lg:py-3 relative'>
-            <a href='javascript:void(0)'
+            <a
               className='hover:text-blue-500 fill-white text-white text-[15px] font-bold lg:hover:fill-blue-500 block'>{t('pricing')}<svg
                 xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" className="ml-1 inline-block"
                 viewBox="0 0 24 24">
                 <path
                   d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
-                  data-name="16" data-original="#000000" />
+                 data-name="16" data-original="#000000" />
               </svg>
             </a>
             <ul
               className='absolute shadow-lg bg-slate-800 space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
-              <li className='border-b py-2 '><a href='javascript:void(0)'
-                  className='hover:text-blue-500 text-white text-[15px] font-bold block'>Portfolio</a></li>
-              <li className='border-b py-2 '><a href='javascript:void(0)'
-                  className='hover:text-blue-500 text-white text-[15px] font-bold block'>Individual</a></li>
-              <li className='border-b py-2 '><a href='javascript:void(0)'
-                  className='hover:text-blue-500 text-white text-[15px] font-bold block'>Team</a></li>
-              <li className='border-b py-2 '><a href='javascript:void(0)'
-                  className='hover:text-blue-500 text-white text-[15px] font-bold block'>E-commerce</a></li>
+              <li className='border-b py-2 '><Link href='/pricing'
+                  className='hover:text-blue-500 text-white text-[15px] font-bold block'>Portfolio</Link></li>
+              <li className='border-b py-2 '><Link href='/pricing'
+                  className='hover:text-blue-500 text-white text-[15px] font-bold block'>Individual</Link></li>
+              <li className='border-b py-2 '><Link href='/pricing'
+                  className='hover:text-blue-500 text-white text-[15px] font-bold block'>Team</Link></li>
+              <li className='border-b py-2 '><Link href='/pricing'
+                  className='hover:text-blue-500 text-white text-[15px] font-bold block'>E-commerce</Link></li>
             </ul>
           </li>
           <li className="max-lg:border-b max-lg:py-3">
               <a
-                href="javascript:void(0)"
+                 href="#"
+                 onClick={(e) => {
+                   e.preventDefault(); // Prevent navigation to the `#`
+                   const section = document.getElementById('contact');
+                   if (section) {
+                     section.scrollIntoView({ behavior: 'smooth' });
+                   }
+                 }}
                 className="hover:text-blue-500 text-[15px] font-bold text-white block"
               >
                 {t('contact')}

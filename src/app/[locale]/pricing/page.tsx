@@ -1,7 +1,7 @@
 "use client"
 
-import { Navbar } from "../../../components/ui/nav";
-import { FloatingDockDemo } from "../../../components/ui/footer";
+import { Navbar } from "../../components/ui/nav";
+import { FloatingDockDemo } from "../../components/ui/footer";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
@@ -38,7 +38,7 @@ const Pricing = () => {
         <>
         <Navbar />
         
-        <section ref={sectionRef} className="py-10 sm:py-16 lg:py-24 opacity-0 transform translate-y-10 transition duration-700">
+        <section ref={sectionRef} className="py-10 sm:py-16 lg:py-24 opacity-0 transform translate-y-10 transition duration-700" id="portfolio">
     <div className="container px-6 py-8 mx-auto">
         <div className="sm:flex sm:items-center sm:justify-between">
             <div>
