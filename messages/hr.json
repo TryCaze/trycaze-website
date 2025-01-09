@@ -66,22 +66,6 @@
 "hosting-subtitle": "Pouzdan i Brz Web Hosting",
 "hosting-description": "Vaša web stranica bit će smještena na sigurnim i visokoučinkovitim serverima Hostingera, što osigurava brzo učitavanje i pouzdan rad. Mi ćemo upravljati postavkama i podrškom kako biste uživali u bezbrižnom hostingu."
 },
-"Process":{
-      "title": "Proces",
-      "subtitle": "Kako bismo osigurali najbolje iskustvo, imamo strukturu koja je intuitivna i jasno definirana. Slijedeći ovu strukturu, osiguravamo najbržu isporuku i najbolju moguću kvalitetu.",
-      "step-1": "Korak 1",
-      "step-2": "Korak 2",
-      "step-3": "Korak 3",
-      "step-4": "Korak 4",
-      "s1-title": "Konzultacije",
-      "s1-description": "Konzultacije obično započinju vašim kontaktiranjem putem narudžbenice, gdje ukratko opisujete svoje potrebe. Zatim vas kontaktiramo i dogovorimo sastanak (obično 30 minuta). Ovaj sastanak možete sami rezervirati putem narudžbenice. Na ovom sastanku, koji je obično u obliku telefonskog poziva ili poruka, razgovaramo o vašim potrebama i kako vam možemo pomoći.",
-      "s2-title": "Dizajn i razvoj",
-      "s2-description": "Nakon što se prijedlog potpiše, započinjemo s dizajnom i razvojem. Nakon izrade dizajna, dogovaramo kratki sastanak na kojem vam predstavljamo našu ideju. Dajete nam povratne informacije koje zatim implementiramo. Kada budete zadovoljni s dizajnom, započinjemo razvoj.",
-      "s3-title": "Prezentacija",
-      "s3-description": "Nakon što je sve dovršeno, dogovaramo kratki sastanak na kojem vam predstavljamo naše rješenje.",
-      "s4-title": "Revizija",
-      "s4-description": "Ovaj korak služi za dodatne izmjene našeg rješenja. Ako ste zadovoljni našim rješenjem, poslat ćemo vam račun i pobrinuti se za domenu i hosting web stranice."  
-},
 "Technology": {
   "title": "Naš izbor",
   "title2":"alata",
@@ -141,6 +125,7 @@
         "button": "Pošalji"
       },
       "Footer":{
-        "title":"Najbolji studio za vaše Internetske potrebe."
+        "title":"Najbolji studio za vaše Internetske potrebe.",
+        "button":"Imate pitanje?"
       }
 }

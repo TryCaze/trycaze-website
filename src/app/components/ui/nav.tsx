@@ -192,19 +192,9 @@ export function Navbar() {
             </ul>
           </li>
           <li className="max-lg:border-b max-lg:py-3">
-              <Link
-                 href="#"
-                 onClick={(e) => {
-                   e.preventDefault(); // Prevent navigation to the `#`
-                   const section = document.getElementById('contact');
-                   if (section) {
-                     section.scrollIntoView({ behavior: 'smooth' });
-                   }
-                 }}
-                className="hover:text-blue-500 text-[15px] font-bold text-white block"
-              >
+              <a href="mailto:trycaze@gmail.com" className="hover:text-blue-500 text-[15px] font-bold text-white block">
                 {t('contact')}
-              </Link>
+              </a>
             </li>
             <Switch />
           </ul>

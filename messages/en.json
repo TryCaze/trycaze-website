@@ -66,22 +66,6 @@
        "hosting-subtitle":"Reliable and Fast Web Hosting",
       "hosting-description":"Your website will be hosted on Hostingers secure and high-performance servers, ensuring fast load times and dependable uptime. we will manage the setup and support, so you can enjoy hassle-free hosting."
     },
-    "Process":{
-      "title":"Process",
-      "subtitle":"To ensure you have the best experience, we have a structure that is intuitive and has a clear path. By following this structure, we ensure the fastest delivery and the best possible quality.",
-      "step-1":"Step 1",
-      "step-2":"Step 2",
-      "step-3":"Step 3",
-      "step-4":"Step 4",
-      "s1-title":"Consultation",
-      "s1-description":"Consultation usually begins with you contacting us through the order form, where you briefly describe your needs. We then contact you and schedule a meeting (usually 30 minutes). You can book this meeting yourself in the order form. In this meeting, which is usually in the form of a phone call or messages, we discuss your needs and how we can help you.",
-      "s2-title":"Deisgn and development",
-      "s2-description":"Once the proposal is signed, we start the design and development. After creating the design, we schedule a short meeting where we present our idea to you. You give us feedback, which we then implement. Once you are satisfied with the design, we start the development.",
-      "s3-title":"Presentation",
-      "s3-description":"After everything is done, we schedule a short meeting where we present our solution to you.",
-      "s4-title":"Revision",
-      "s4-description":"This step is just for additional modifications to our solution. If you are satisfied with our solution, we will send you an invoice and take care of the domain and hosting of the website."
-    },
     "Technology":{
       "title":"Our choice",
       "title2":"of tools",
@@ -141,6 +125,7 @@
       "button":"Send"
     },
     "Footer":{
-      "title":"Best studio to solve your Internet needs."
+      "title":"Best studio to solve your Internet needs.",
+      "button":"Have questions?"
     }
 }
